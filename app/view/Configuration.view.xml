@@ -1,0 +1,67 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+ xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.apptech.app.controller.Configuration" 
+ id="VwConfig">
+	<App>
+		<pages><Page backgroundDesign="Solid" navButtonType="Accept" icon="sap-icon://disconnected" showFooter="false">
+			<customHeader>
+			    <Toolbar class="sapContrastPlus" width="100%" id="toolbar1">
+			        <content>
+			            <Button xmlns="sap.m" id="BtnBack" icon="sap-icon://close-command-field" type="Transparent" press="OnClickBack"/>
+			            <ToolbarSpacer id="spacer1"/><Button xmlns="sap.m" text="Configuration" id="button1" icon="sap-icon://settings" type="Transparent" enabled="false" textDirection="RTL"/>
+			        </content>
+			    </Toolbar>
+			</customHeader>
+			<content>
+			    <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="form0">
+			        <sap.ui.layout.form:content>
+			            <core:Title text="API Service Layer Credentials" id="title0" icon="sap-icon://sap-ui5" emphasized="true"/>
+			            <Label text="URL" id="label0" wrapping="true" width="50%"/>
+			            <Input width="50%" id="APIUrl" required="true"/>
+			            <Label text="Database" width="50%" id="label0_1574770996624"/>
+			            <ComboBox xmlns="sap.m" id="APIDB" maxWidth="50%" required="true">
+			                <items>
+			                    <core:Item xmlns:core="sap.ui.core" key="SBODEMOAU" text="SBODEMOAU" id="item0"/>
+			                    <core:Item xmlns:core="sap.ui.core" key="APP_RE" text="APP_RE" id="item1"/>
+			                    </items>
+			                
+			            </ComboBox>
+			            <Label text="UserName" id="label1" wrapping="true" width="50%"/>
+			            <Input width="50%" id="APIUserName" required="true"/>
+			            <Label text="Password" width="50%" id="label2" wrapping="true"/>
+			            <Input width="50%" id="APIPassword" required="true"/>
+			            <Label text="" id="SAPlabel19" wrapping="true" width="50%"/>
+			            <Button xmlns="sap.m" text="Connect" id="BtnConnectAPI" width="50%" icon="sap-icon://process" press="OnConnectToAPI"/>
+			        </sap.ui.layout.form:content>
+			    </sap.ui.layout.form:SimpleForm>
+			     <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="form1">
+			        <sap.ui.layout.form:content>
+			            <core:Title text="SAP HANA on Cloud Credentials" id="title10" icon="sap-icon://sap-logo-shape" emphasized="true"/>
+			            <Label text="URL" id="SAPlabel0" wrapping="true" width="50%"/>
+			            <Input width="50%" id="SAPUrl" required="true"/>
+			            <Label text="Database" width="50%" id="label0_1575349197934"/>
+			            <ComboBox xmlns="sap.m" id="SAPDB" maxWidth="50%" required="true">
+			                <items>
+			                    <core:Item xmlns:core="sap.ui.core" key="SBODEMOAU" text="SBODEMOAU" id="item6"/>
+			                    <core:Item xmlns:core="sap.ui.core" key="APP_RE" text="APP_RE" id="item7"/>
+			                    </items>
+			                
+			            </ComboBox>
+			            <Label text="UserName" id="label10" wrapping="true" width="50%"/>
+			            <Input width="50%" id="SAPUserName" required="true"/>
+			            <Label text="Password" width="50%" id="label12" wrapping="true"/>
+			            <Input width="50%" id="SAPPassword" required="true"/>
+			            <Label text="" id="SAPlabel9" wrapping="true" width="50%"/>
+			            <Button xmlns="sap.m" text="Connect" id="BtnConnectSAP" width="50%" icon="sap-icon://process" press="OnConnectToSAPCloud"/>
+			           
+			        </sap.ui.layout.form:content>
+			    </sap.ui.layout.form:SimpleForm>
+			     <Bar id="bar1">
+			                <contentRight>
+			                    <Button xmlns="sap.m" text="Save" id="BtnSave" icon="sap-icon://save" type="Transparent" busyIndicatorSize="Auto"/>
+			                </contentRight>
+			     </Bar>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Integrator</title>
+
+		<script>
+			window.nodeRequire = require;
+			delete window.require;
+			delete window.exports;
+			delete window.module;
+		</script>
+
+		<script id="sap-ui-bootstrap"
+			src="libs/openui5-runtime/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs='sap.m'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-async="true"
+			data-sap-ui-resourceroots='{"com.apptech": "./"}'
+			>
+		</script>
+	<script>
+        sap.ui.getCore().attachInit(function () {
+            new sap.m.Shell({
+                app: new sap.ui.core.ComponentContainer({
+                        name: "com.apptech.app"
+                        }),
+                appWidthLimited: false
+            }).placeAt("content");
+        });
+    </script>
+
+    <script src='../CompanyABCIntegration/main.js'>
+    </script>
+    
+
+</head>
+
+<body id='content' class='sapUiBody'  height="100%">
+</body>
+</html>

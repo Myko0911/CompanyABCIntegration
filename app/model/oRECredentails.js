@@ -1,0 +1,8 @@
+{
+	"Credential" :
+	{
+		
+		"UserName" :"",
+		"Password" :""
+	}
+}

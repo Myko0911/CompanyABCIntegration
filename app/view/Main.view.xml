@@ -1,0 +1,90 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.apptech.app.controller.Main" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages><Page id="Main" title="{i18n>title}">
+				<customHeader>
+				    <Toolbar class="sapContrastPlus" width="100%" id="toolbar1">
+				    <content>
+				        <Toolbar width="100%" id="toolbar2">
+				            <content>
+				                <Button xmlns="sap.m" text="SAP Utility Integration" id="button0" icon="sap-icon://sap-logo-shape" enabled="false" type="Transparent"/>
+				            </content>
+				        </Toolbar>
+				    </content>
+				    </Toolbar>
+				</customHeader>
+				<content>
+				    <sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane0" id="splitter0">
+				        <sap.ui.layout:rootPaneContainer>
+				            <sap.ui.layout:PaneContainer orientation="Vertical" id="container2">
+				                <sap.ui.layout:panes>
+				                    <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane0">
+				                        <sap.ui.layout:content>
+				                            <Panel height="100%" backgroundDesign="Transparent" id="panel0">
+				                                <layoutData>
+				                                    <sap.ui.layout:SplitterLayoutData resizable="false" id="data28"/>
+				                                </layoutData>
+				                            <content>
+				                                <sap.ui.core:InvisibleText xmlns:sap.ui.core="sap.ui.core" text="InvisibleText" id="text1"/>
+				                                <OverflowToolbar width="100%" id="toolbar1_1574739928778" design="Transparent" style="Clear"/>
+				                                <GenericTile header="CONFIGURATION" id="Config" mode="HeaderMode" subheader="(e.g Connection Settings...)" press="onClickConfig"/>
+				                                <GenericTile header="IMPORT" subheader="(e.g Business Partner, Item Master...)" id="import" frameType="TwoByOne" size="L" press="onClickImports"/><GenericTile header="EXPORT" subheader="(e.g Business Partner, Item Master...)" id="tile2" frameType="TwoByOne" wrappingType="Hyphenated"/>
+				                        		
+				                            </content>
+				                            </Panel>
+				                        </sap.ui.layout:content>
+				                    </sap.ui.layout:SplitPane>
+				                    <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane1">
+				                    <sap.ui.layout:content>
+				                        <sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane2" id="splitter3">
+				                            <sap.ui.layout:rootPaneContainer>
+				                                <sap.ui.layout:PaneContainer id="container1">
+				                                    <sap.ui.layout:panes>
+				                                        <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane2">
+				                                            <sap.ui.layout:content>
+				                                                <Panel height="100%" backgroundDesign="Transparent" id="panel2">
+				                                                    <layoutData>
+				                                                        <sap.ui.layout:SplitterLayoutData resizable="false" id="data11"/>
+				                                                    </layoutData>
+				                                                    <content>
+				                                                      
+				                                                    </content>
+				                                                    </Panel>
+				                                                
+				                                            </sap.ui.layout:content>
+				                                            
+				                                        </sap.ui.layout:SplitPane>
+				                                        <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane3">
+				                                            
+				                                        </sap.ui.layout:SplitPane>
+				                                        </sap.ui.layout:panes>
+				                                    
+				                                </sap.ui.layout:PaneContainer>
+				                                
+				                            </sap.ui.layout:rootPaneContainer>
+				                            <sap.ui.layout:layoutData>
+				                                <sap.ui.layout:SplitterLayoutData id="xmlview0__data30"/>
+				                                
+				                            </sap.ui.layout:layoutData>
+				                            </sap.ui.layout:ResponsiveSplitter>
+				                    </sap.ui.layout:content>
+				                    </sap.ui.layout:SplitPane></sap.ui.layout:panes>
+				            </sap.ui.layout:PaneContainer>
+				        </sap.ui.layout:rootPaneContainer>
+				    </sap.ui.layout:ResponsiveSplitter>
+				</content>
+				<footer>
+				    <Toolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar1_1574746463274">
+				    <content>
+				        <ToolbarSeparator id="separator0"/>
+				        <Text xmlns="sap.m" text="Copyright 2019 ." id="text4"/>
+				        <Link xmlns="sap.m" href="https://apptech-experts.com" text="APPTechnology Experts Inc." id="linkAPP"/>
+				        <Text xmlns="sap.m" text="All Rights Reserved" id="text5"/>
+				    </content>
+				    </Toolbar>
+				</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

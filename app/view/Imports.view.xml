@@ -1,0 +1,51 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.apptech.app.controller.Imports" id="VwImport">
+	<App>
+		<pages>
+			<Page title="Title" showFooter="false" id="vWImport">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="form0" backgroundDesign="Solid">
+				        <sap.ui.layout.form:content>
+				            <core:Title text="Imports" id="title0" icon="sap-icon://download-from-cloud"/>
+				            <Label text="Items / Units" id="label0" width="70%" design="Bold" textAlign="Left"/>
+				            <ProgressIndicator xmlns="sap.m" id="ProgItem" width="70%" state="Information"/>
+				            <Button xmlns="sap.m" text="Import" id="ImpItem" width="35%" press="OnClickImportItem"/>
+				            <Label text="Business Partner" id="label1" width="70%" design="Bold" textAlign="Left"/>
+				            <ProgressIndicator xmlns="sap.m" percentValue="" id="ProgBP" width="70%" state="Information"/>
+				            <Button xmlns="sap.m" text="Import" id="ImpBP" width="35%" press="OnClickImportBP"/>
+				            <Label text="Project" width="70%" id="label0_1575452879962" design="Bold" textAlign="Left"/>
+				            <ProgressIndicator xmlns="sap.m" percentValue="" id="ProgProj" width="70%" state="Information"/>
+				            <Button xmlns="sap.m" text="Import" id="ImpProj" width="35%" press="onClickImportProject"/>
+				       </sap.ui.layout.form:content>
+				    </sap.ui.layout.form:SimpleForm>
+					<Panel height="100%" backgroundDesign="Transparent" id="LogsPane" accessibleRole="Complementary" headerText="View Logs" expandable="true">
+					     <layoutData>
+						 <sap.ui.layout:SplitterLayoutData xmlns:sap.ui.layout="sap.ui.layout" id="data5"/>
+					     </layoutData>
+					          <content>
+					          <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="form1" backgroundDesign="Solid">
+				        			<sap.ui.layout.form:content>
+				        			<List xmlns="sap.m" headerText="Import-Logs" items="{xxx>/Logs}" id="ListImport" growingDirection="Upwards" growingScrollToLoad="true" headerDesign="Plain" showNoData="false">
+									<items>
+									   <StandardListItem title="{xxx>Description}" info="{xxx>Status}" infoState="{xxx>InfoState}"/>
+									</items>
+									</List>
+									</sap.ui.layout.form:content>
+				    		  </sap.ui.layout.form:SimpleForm>
+					         </content>
+					</Panel>
+				</content>
+			<customHeader>
+			    <Toolbar class="sapContrastPlus" width="100%" id="toolbar1">
+			        <content>
+			             <Button xmlns="sap.m" id="BtnBack" icon="sap-icon://close-command-field" type="Transparent" press="OnClickBack"/>
+			            <ToolbarSpacer id="spacer1"/>
+			            <Button xmlns="sap.m" text="Imports" id="button1" icon="sap-icon://download-from-cloud" type="Transparent" textDirection="RTL" enabled="false"/>
+			        </content>
+			    </Toolbar>
+			    
+			</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
