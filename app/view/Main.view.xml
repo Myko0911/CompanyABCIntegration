@@ -1,4 +1,6 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.apptech.app.controller.Main" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"   xmlns:f="sap.f" 
+xmlns:l="sap.ui.layout"
+controllerName="com.apptech.app.controller.Main" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages><Page id="Main" title="{i18n>title}">
@@ -7,14 +9,46 @@
 				    <content>
 				        <Toolbar width="100%" id="toolbar2">
 				            <content>
-				                <Button xmlns="sap.m" text="SAP Utility Integration" id="button0" icon="sap-icon://sap-logo-shape" enabled="false" type="Transparent"/>
+				                <Button xmlns="sap.m" text="SAP Utility Integration" id="button0" icon="sap-icon://sap-logo-shape" enabled="true" type="Transparent"/>
 				            </content>
 				        </Toolbar>
 				    </content>
 				    </Toolbar>
 				</customHeader>
 				<content>
-				    <sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane0" id="splitter0">
+				<ScrollContainer id="initialPage" horizontal="false" vertical="true" height="100%">
+			<l:VerticalLayout class="sapUiResponsiveMargin">
+			
+				<l:HorizontalLayout allowWrapping="true">
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" frameType="TwoByOne" header="Configuration" subheader="Manage connections here" press="onClickConfig">
+						<TileContent>
+							<FeedContent contentText="" value="2" />
+						</TileContent>
+					</GenericTile>
+					
+				</l:HorizontalLayout>
+				
+				<l:HorizontalLayout allowWrapping="true">
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" frameType="TwoByOne" header="Import" subheader="Import to SAP Systems (B1 / ByD)" press="onClickImports">
+						<TileContent>
+							<FeedContent contentText="" value="N" />
+						</TileContent>
+					</GenericTile>
+					
+				</l:HorizontalLayout>
+				
+				<l:HorizontalLayout allowWrapping="true">
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" frameType="TwoByOne" header="Export"  subheader="Export to External Systems">
+						<TileContent>
+							<FeedContent contentText="" value="352" />
+						</TileContent>
+					</GenericTile>
+					
+				</l:HorizontalLayout>
+
+			</l:VerticalLayout>
+		</ScrollContainer>
+				    <!-- <sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane0" id="splitter0">
 				        <sap.ui.layout:rootPaneContainer>
 				            <sap.ui.layout:PaneContainer orientation="Vertical" id="container2">
 				                <sap.ui.layout:panes>
@@ -34,46 +68,12 @@
 				                            </Panel>
 				                        </sap.ui.layout:content>
 				                    </sap.ui.layout:SplitPane>
-				                    <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane1">
-				                    <sap.ui.layout:content>
-				                        <sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane2" id="splitter3">
-				                            <sap.ui.layout:rootPaneContainer>
-				                                <sap.ui.layout:PaneContainer id="container1">
-				                                    <sap.ui.layout:panes>
-				                                        <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane2">
-				                                            <sap.ui.layout:content>
-				                                                <Panel height="100%" backgroundDesign="Transparent" id="panel2">
-				                                                    <layoutData>
-				                                                        <sap.ui.layout:SplitterLayoutData resizable="false" id="data11"/>
-				                                                    </layoutData>
-				                                                    <content>
-				                                                      
-				                                                    </content>
-				                                                    </Panel>
-				                                                
-				                                            </sap.ui.layout:content>
-				                                            
-				                                        </sap.ui.layout:SplitPane>
-				                                        <sap.ui.layout:SplitPane requiredParentWidth="50" id="pane3">
-				                                            
-				                                        </sap.ui.layout:SplitPane>
-				                                        </sap.ui.layout:panes>
-				                                    
-				                                </sap.ui.layout:PaneContainer>
-				                                
-				                            </sap.ui.layout:rootPaneContainer>
-				                            <sap.ui.layout:layoutData>
-				                                <sap.ui.layout:SplitterLayoutData id="xmlview0__data30"/>
-				                                
-				                            </sap.ui.layout:layoutData>
-				                            </sap.ui.layout:ResponsiveSplitter>
-				                    </sap.ui.layout:content>
-				                    </sap.ui.layout:SplitPane></sap.ui.layout:panes>
+				                    </sap.ui.layout:panes>
 				            </sap.ui.layout:PaneContainer>
 				        </sap.ui.layout:rootPaneContainer>
-				    </sap.ui.layout:ResponsiveSplitter>
+				    </sap.ui.layout:ResponsiveSplitter> -->
 				</content>
-				<footer>
+				<!-- <footer>
 				    <Toolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar1_1574746463274">
 				    <content>
 				        <ToolbarSeparator id="separator0"/>
@@ -82,7 +82,7 @@
 				        <Text xmlns="sap.m" text="All Rights Reserved" id="text5"/>
 				    </content>
 				    </Toolbar>
-				</footer>
+				</footer> -->
 				</Page>
 			</pages>
 		</App>
