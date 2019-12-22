@@ -9,7 +9,7 @@ controllerName="com.apptech.app.controller.Main" displayBlock="true">
 				    <content>
 				        <Toolbar width="100%" id="toolbar2">
 				            <content>
-				                <Button xmlns="sap.m" text="SAP Utility Integration" id="button0" icon="sap-icon://sap-logo-shape" enabled="true" type="Transparent"/>
+				                <Button xmlns="sap.m" text="SAP Utility Integration cpa" id="button0" icon="sap-icon://sap-logo-shape" enabled="true" type="Transparent"/>
 				            </content>
 				        </Toolbar>
 				    </content>
